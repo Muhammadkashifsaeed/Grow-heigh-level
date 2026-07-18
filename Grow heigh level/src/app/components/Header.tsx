@@ -17,7 +17,6 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [showDivider, setShowDivider] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -30,15 +29,14 @@ export default function Header() {
 
   return (
     <header
-      onClick={() => setShowDivider((v) => !v)}
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? "px-4 pt-3 sm:px-6" : "px-0 pt-0"
       }`}
     >
       <div
         className={`mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 rounded-full border border-border px-6 shadow-sm backdrop-blur-md transition-all duration-300 ${
-          scrolled ? "mx-3 sm:mx-6 bg-white" : "mx-0 bg-card/70"
-        } ${showDivider ? "border-blue-500" : ""}`}
+          scrolled ? "bg-white" : "bg-card/70"
+        }`}
       >
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2">
@@ -82,14 +80,6 @@ export default function Header() {
             Book a Discovery Call
           </Link>
         </div>
-      </div>
-
-      <div
-        className={`mx-auto max-w-7xl overflow-hidden rounded-full transition-all duration-300 ${
-          scrolled ? "mx-3 sm:mx-6" : "mx-0"
-        } ${showDivider ? "h-1 opacity-100" : "h-0 opacity-0"}`}
-      >
-        <div className="h-1 w-full bg-blue-500" />
       </div>
     </header>
   );
