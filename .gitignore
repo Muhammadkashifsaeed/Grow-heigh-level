@@ -1,1 +1,17 @@
-mylogs.log
+# Ignore everything by default
+*
+
+# But not these folders/files
+!.gitignore
+!Grow heigh level/
+!Grow heigh level/**
+
+# Ignore common unnecessary files
+*.lnk
+*.log
+node_modules/
+.next/
+dist/
+build/
+.DS_Store
+Thumbs.db
