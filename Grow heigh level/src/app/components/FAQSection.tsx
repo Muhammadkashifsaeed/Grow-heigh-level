@@ -30,16 +30,18 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-black py-20">
+    <section className="bg-white py-20">
       <div className="mx-auto max-w-3xl px-6">
-        <p className="text-center text-sm font-semibold uppercase tracking-widest text-green-400">
-          Answers &amp; Insight
-        </p>
-        <h2 className="mt-4 text-center text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
+        <div className="flex justify-center">
+          <p className="rounded-full bg-black px-5 py-1.5 text-sm font-semibold uppercase tracking-widest text-green-400">
+            Answers &amp; Insight
+          </p>
+        </div>
+        <h2 className="mt-4 text-center text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
           Frequently Asked{" "}
-          <span className="text-green-400">Questions</span>
+          <span className="text-green-600">Questions</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-slate-300">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-slate-600">
           Everything you need to know about our GoHighLevel infrastructure and
           AI automation services.
         </p>
@@ -50,7 +52,7 @@ export default function FAQSection() {
             return (
               <div
                 key={q}
-                className="rounded-2xl border border-white/10 bg-white/5 transition-colors duration-300"
+                className="rounded-2xl border border-slate-200 bg-white transition-colors duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
@@ -58,14 +60,14 @@ export default function FAQSection() {
                 >
                   <span
                     className={`text-sm font-semibold transition-colors duration-300 ${
-                      isOpen ? "text-green-400" : "text-white"
+                      isOpen ? "text-green-600" : "text-slate-900"
                     }`}
                   >
                     {q}
                   </span>
                   <ChevronDown
                     className={`h-5 w-5 shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-green-400" : "text-slate-400"
+                      isOpen ? "rotate-180 text-green-600" : "text-slate-400"
                     }`}
                   />
                 </button>
@@ -76,7 +78,7 @@ export default function FAQSection() {
                     opacity: isOpen ? 1 : 0,
                   }}
                 >
-                  <p className="px-6 pb-4 text-sm leading-6 text-slate-300">
+                  <p className="px-6 pb-4 text-sm leading-6 text-slate-600">
                     {a}
                   </p>
                 </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Footer from "../../components/Footer";
 
 export default function WebsiteFunnelPage() {
   return (
@@ -28,6 +29,7 @@ export default function WebsiteFunnelPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }
