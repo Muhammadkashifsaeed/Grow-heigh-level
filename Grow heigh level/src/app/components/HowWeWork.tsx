@@ -85,7 +85,7 @@ export default function HowWeWork() {
         {/* 6 BOXES IN ONE ROW WITH DIVIDERS */}
         <div className="mt-14 flex items-stretch justify-center">
           {steps.map((step, idx) => {
-            const { Icon, accent, dot, title, body, divider } = step;
+            const { Icon, accent, title, body, divider } = step;
             return (
               <div
                 key={title}

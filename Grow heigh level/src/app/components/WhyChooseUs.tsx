@@ -10,7 +10,6 @@ import {
   Users,
   MousePointerClick,
   Bot,
-  BarChart3,
   LayoutDashboard,
   Mail,
   MessageSquare,
